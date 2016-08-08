@@ -1,0 +1,28 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ <package name="struts2" extends="struts-default">
+   <action name="LoginAction" class="com.LoginAction" method="execute">
+     <result name="success">/welcome.jsp</result>
+     <result name="fail">/login.jsp</result>
+   </action>
+   
+ </package>  
+ 
+ 
+  <package name="jsonTest"  extends="json-default">
+
+<action name="testjson" class="com.TestjsonAction" method="getList">               
+            <result type="json">  
+                <param name="root">responseJson</param>  
+            </result>  
+</action>
+<action name="testjson2" class="com.TestjsonAction" method="getList2">               
+            <result type="json">  
+                <param name="root">responseJson</param>  
+            </result>  
+</action>    
+ </package>  
+ 
+</struts>
